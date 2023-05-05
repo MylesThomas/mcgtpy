@@ -1,6 +1,7 @@
 # Import methods from our Modules
 from mcgtpy.my_stats import print_stats
 from mcgtpy.helper_functions import columns_janitor
+from mcgtpy.database import load_nba_box_score_data
 
 # Print stats (we don't need this necessarily ...)
 print_stats()
@@ -28,4 +29,10 @@ def test_4():
     input = ['__myles___  ___', '__CHRISTIAN   gEORGE  ', '  __ THomAS _  _   ']
     actual = columns_janitor(input)
     expected = ['myles', 'christian_george', 'thomas']
+    assert actual == expected
+
+def test_5():
+    input = load_nba_box_score_data()
+    actual = input.shape[0]
+    expected = 133831
     assert actual == expected
