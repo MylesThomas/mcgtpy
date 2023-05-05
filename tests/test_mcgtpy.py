@@ -23,3 +23,9 @@ def test_3():
     actual = columns_janitor(input)
     expected = ["hey", "a_b_c"]
     assert actual == expected
+
+def test_4():
+    input = ['__myles___  ___', '__CHRISTIAN   gEORGE  ', '  __ THomAS _  _   ']
+    actual = columns_janitor(input)
+    expected = ['myles', 'christian_george', 'thomas']
+    assert actual == expected
