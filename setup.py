@@ -16,7 +16,7 @@ setup(
     author_email=author_email,
     license='MIT',
     packages=find_packages(),
-    install_requires=['timedelta', 'datetime', 'pandas', 'requests', 'io'], # https://python-packaging.readthedocs.io/en/latest/dependencies.html
+    install_requires=['timedelta', 'datetime', 'pandas', 'requests'], # https://python-packaging.readthedocs.io/en/latest/dependencies.html
     keywords='conversion',
     classifiers= [
         "Development Status :: 3 - Alpha",
