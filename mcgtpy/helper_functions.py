@@ -13,7 +13,7 @@ def columns_janitor(old_col_names):
         col_name_stripped_and_lower_and_spaces_removed = col_name_stripped_and_lower.replace(" ", "_")
         # remove weird characters
         new_col_name = "".join(
-            item for item in str(col_name_stripped_and_lower_and_spaces_removed) if item.isalnum() or "_" in item
+            item for item in str(col_name_stripped_and_lower_and_spaces_removed) if item.isalnum() or item == "_"
         )
         # make sure there are 0 instances of 2 _'s next to each other
         while "__" in new_col_name:
