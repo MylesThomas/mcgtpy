@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-VERSION = '0.0.4'
+VERSION = '0.0.5'
 DESCRIPTION = 'My first Python Package!'
 LONG_DESCRIPTION = 'This package will have everything I use on a daily basis to make life easier when coding in Python.'
 
@@ -16,7 +16,7 @@ setup(
     author_email=author_email,
     license='MIT',
     packages=find_packages(),
-    install_requires=[],
+    install_requires=['timedelta', 'datetime'], # https://python-packaging.readthedocs.io/en/latest/dependencies.html
     keywords='conversion',
     classifiers= [
         "Development Status :: 3 - Alpha",
