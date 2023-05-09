@@ -6,14 +6,16 @@ def columns_janitor(old_col_names):
     new_col_names_list = []
     for col_name in old_col_names:
         # strip whitespace
-        col_name_stripped = col_name.strip()
+        col_name = col_name.strip()
         # make lowercase
-        col_name_stripped_and_lower = col_name_stripped.lower()
+        col_name = col_name.lower()
         # replace " " with "_"
-        col_name_stripped_and_lower_and_spaces_removed = col_name_stripped_and_lower.replace(" ", "_")
+        col_name = col_name.replace(" ", "_")
+        # replace "." with "_"
+        col_name = col_name.replace(".", "_")
         # remove weird characters
         new_col_name = "".join(
-            item for item in str(col_name_stripped_and_lower_and_spaces_removed) if item.isalnum() or item == "_"
+            item for item in str(col_name) if item.isalnum() or item == "_"
         )
         # make sure there are 0 instances of 2 _'s next to each other
         while "__" in new_col_name:
