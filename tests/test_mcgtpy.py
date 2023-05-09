@@ -36,3 +36,9 @@ def test_5():
     actual = input.shape[0]
     expected = 133831
     assert actual == expected
+
+def test_6():
+    input = ["time.of.day", "temperature.1", "temperature.30", "car.count"]
+    actual = columns_janitor(input)
+    expected = ["time_of_day", "temperature_1", "temperature_30", "car_count", ]
+    assert actual == expected

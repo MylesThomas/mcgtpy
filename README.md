@@ -1,1 +1,1 @@
-"# mcgtpy" 
+"# mcgtpy - Myles Thomas Python Package" 
